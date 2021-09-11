@@ -164,6 +164,32 @@
 				<key>Release</key>
 				<dict/>
 			</dict>
+		</dict>
+                <dict>
+                        <key>ProductType</key>
+                        <string>com.apple.product-type.tool</string>
+                        <key>TargetIdentifier</key>
+                        <string>com.apple.dt.commandLineToolTarget</string>
+                        <key>Name</key>
+                        <string>Binary</string>
+                        <key>SharedSettings</key>
+                        <dict>
+                                <key>PRODUCT_NAME</key>
+                                <string>___PACKAGENAME___</string>
+                        </dict>
+                </dict>
+                <dict>
+                        <key>ProductType</key>
+                        <string>com.apple.product-type.tool</string>
+                        <key>TargetIdentifier</key>
+                        <string>com.apple.dt.commandLineToolTarget</string>
+                        <key>Name</key>
+                        <string>DiskImage</string>
+                        <key>SharedSettings</key>
+                        <dict>
+                                <key>PRODUCT_NAME</key>
+                                <string>___PACKAGENAME___.dsk</string>
+                        </dict>
                 </dict>
                 <dict>
                         <key>ProductType</key>
@@ -179,7 +205,7 @@
                                 <key>GCC_PREPROCESSOR_DEFINITIONS</key>
                                 <string>__fastcall__=""</string>
                                 <key>HEADER_SEARCH_PATHS</key>
-                                <string>/usr/local/lib/cc65/include</string>
+                                <string>$TEMP_ROOT/___PACKAGENAME___.build/$CONFIGURATION/___PACKAGENAME___.build/DerivedSources /usr/local/share/cc65/include</string>
                         </dict>
                         <key>BuildPhases</key>
                         <array>

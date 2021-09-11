@@ -15,6 +15,7 @@
 		<string>make/dos33_template.dsk</string>
 		<string>make/errorFilter.sh</string>
 		<string>make/head.mk</string>
+		<string>make/merlin-asm</string>
 		<string>make/prodos_template.dsk</string>
 		<string>make/tail.mk</string>
                 <string>make/V2Make.scpt</string>
@@ -45,6 +46,13 @@
 			<string>make</string>
 			<key>Path</key>
 			<string>make/errorFilter.sh</string>
+		</dict>
+		<key>make/merlin-asm</key>
+		<dict>
+			<key>Group</key>
+			<string>make</string>
+			<key>Path</key>
+                        <string>make/merlin-asm</string>
 		</dict>
 		<key>make/tail.mk</key>
 		<dict>
@@ -170,6 +178,32 @@
 				<key>Release</key>
 				<dict/>
 			</dict>
+		</dict>
+                <dict>
+                        <key>ProductType</key>
+                        <string>com.apple.product-type.tool</string>
+                        <key>TargetIdentifier</key>
+                        <string>com.apple.dt.commandLineToolTarget</string>
+                        <key>Name</key>
+                        <string>Binary</string>
+                        <key>SharedSettings</key>
+                        <dict>
+                                <key>PRODUCT_NAME</key>
+                                <string>___PACKAGENAME___</string>
+                        </dict>
+                </dict>
+                <dict>
+                        <key>ProductType</key>
+                        <string>com.apple.product-type.tool</string>
+                        <key>TargetIdentifier</key>
+                        <string>com.apple.dt.commandLineToolTarget</string>
+                        <key>Name</key>
+                        <string>DiskImage</string>
+                        <key>SharedSettings</key>
+                        <dict>
+                                <key>PRODUCT_NAME</key>
+                                <string>___PACKAGENAME___.dsk</string>
+                        </dict>
                 </dict>
                 <dict>
                         <key>ProductType</key>
@@ -185,7 +219,7 @@
                                 <key>GCC_PREPROCESSOR_DEFINITIONS</key>
                                 <string>__fastcall__=""</string>
                                 <key>HEADER_SEARCH_PATHS</key>
-                                <string>/usr/local/lib/cc65/include</string>
+                                <string>$TEMP_ROOT/___PACKAGENAME___.build/$CONFIGURATION/___PACKAGENAME___.build/DerivedSources /usr/local/share/cc65/include</string>
                         </dict>
                         <key>BuildPhases</key>
                         <array>
